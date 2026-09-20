@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petualangan Harmoni Ekosistem - Kelas 5 SD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigasi -->
+    <header class="clay-card">
+        <h1>🍃 HARMONI EKOSISTEM (IPAS KELAS 5)</h1>
+        <div class="nav-buttons">
+            <button class="clay-btn" onclick="switchModul('modul1')">Modul 1: Detektif</button>
+            <button class="clay-btn" onclick="switchModul('modul2')">Modul 2: Simulator</button>
+            <button class="clay-btn" onclick="switchModul('modul3')">Modul 3: Piramida</button>
+            <button class="clay-btn" onclick="switchModul('modul4')">Modul 4: Cerita</button>
+        </div>
+    </header>
+
+    <!-- CONTAINER UTAMA -->
+    <main id="app-container">
+
+        <!-- MODUL 1: DETEKTIF EKOSISTEM -->
+        <section id="modul1" class="modul-section active">
+            <div class="clay-card header-modul">
+                <h2>🔍 Modul 1: Detektif Ekosistem (Drag & Drop Peran)</h2>
+                <p>Geser karakter claymation di bawah ke dalam zona peran yang tepat!</p>
+            </div>
+
+            <!-- Zona Drop -->
+            <div class="drop-zones">
+                <div class="zone clay-depth" data-role="produsen">
+                    <h3>PRODUSEN</h3>
+                    <div class="target-box"></div>
+                </div>
+                <div class="zone clay-depth" data-role="konsumen1">
+                    <h3>KONSUMEN I</h3>
+                    <div class="target-box"></div>
+                </div>
+                <div class="zone clay-depth" data-role="puncak">
+                    <h3>KONSUMEN PUNCAK</h3>
+                    <div class="target-box"></div>
+                </div>
+                <div class="zone clay-depth" data-role="dekomposer">
+                    <h3>DEKOMPOSER</h3>
+                    <div class="target-box"></div>
+                </div>
+            </div>
+
+            <!-- Bank Karakter (Draggable Items) -->
+            <div class="clay-card bank-items">
+                <div class="drag-item clay-btn-item" draggable="true" id="item1" data-role="produsen">🌾 Padi</div>
+                <div class="drag-item clay-btn-item" draggable="true" id="item2" data-role="konsumen1">🦗 Belalang</div>
+                <div class="drag-item clay-btn-item" draggable="true" id="item3" data-role="puncak">🦅 Elang</div>
+                <div class="drag-item clay-btn-item" draggable="true" id="item4" data-role="dekomposer">🍄 Jamur</div>
+            </div>
+
+            <!-- Area Canvas Stylus Hisense -->
+            <div class="clay-card canvas-container">
+                <h3>✏️ Coretan Stylus Hisense: Hubungkan Jaring Makanan</h3>
+                <canvas id="hisenseCanvas" width="900" height="300"></canvas>
+                <button class="clay-btn danger" onclick="clearCanvas()">Hapus Coretan</button>
+            </div>
+        </section>
+
+        <!-- MODUL LAIN (PLACEHOLDER SIAP DIKEMBANGKAN) -->
+        <section id="modul2" class="modul-section">
+            <div class="clay-card">
+                <h2>⚖️ Modul 2: Ekosistem Simulator</h2>
+                <p>Akan datang pada pertemuan ke-2!</p>
+            </div>
+        </section>
+
+        <section id="modul3" class="modul-section">
+            <div class="clay-card">
+                <h2>⚡ Modul 3: Lomba Piramida Energi</h2>
+                <p>Mode Split-Screen Hisense siap dikembangkan!</p>
+            </div>
+        </section>
+
+        <section id="modul4" class="modul-section">
+            <div class="clay-card">
+                <h2>🦅 Modul 4: Petualangan Si Elang</h2>
+                <p>Storytelling bercabang siap dikembangkan!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
